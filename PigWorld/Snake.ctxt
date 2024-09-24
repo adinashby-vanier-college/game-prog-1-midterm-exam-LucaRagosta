@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Snake
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ loss()
+comment2.text=\r\n\ This\ method\ makes\ it\ so\ that\ when\ the\ game\ is\ lost\ it\ transitions\ to\ the\ defeat\ screen\r\n
+comment3.params=
+comment3.target=void\ moveAround()
+comment3.text=\r\n\ This\ is\ the\ random\ movement\ generator.\ it\ makes\ the\ snake\ move\ at\ a\ speed\ f\ 4\ but\ randomly\ switch\ directs\ \r\n
+comment4.params=
+comment4.target=void\ pigtouch()
+comment4.text=\r\n\ This\ method\ makes\ \ it\ so\ that\ when\ the\ snake\ touches\ the\ pig,\ the\ pig\ perishes\ and\ dissapears.\ It\ also\ plays\ the\ lose\ noise\r\n
+comment5.params=
+comment5.target=boolean\ isGameLost()
+comment5.text=\r\n\ This\ method\ makes\ it\ so\ that\ if\ the\ pig\ ceases\ to\ exist\ in\ the\ world,\ then\ it\ wold\ return\ a\ true\ value\ to\ the\ game\ being\ lost.\ This\ information\ goes\ to\ the\ following\ method\ "transitionToDefeat"\ and\ causes\ the\ defeat\ screen\ to\ appear\r\n
+comment6.params=
+comment6.target=void\ transitionToDefeat()
+comment6.text=\r\n\ \r\n
+numComments=7

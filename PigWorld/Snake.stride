@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Snake" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the Snake wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="moveAround()" expression-java="moveAround()" enable="true"/>
+                <call expression="loss()" expression-java="loss()" enable="true"/>
+                <call expression="pigtouch()" expression-java="pigtouch()" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="loss" enable="true">
+            <javadoc xml:space="preserve">This method makes it so that when the game is lost it transitions to the defeat screen</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="isGameLost()" condition-java="isGameLost()" enable="true">
+                    <ifStatements>
+                        <call expression="transitionToDefeat()" expression-java="transitionToDefeat()" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="moveAround" enable="true">
+            <javadoc xml:space="preserve">This is the random movement generator. it makes the snake move at a speed f 4 but randomly switch directs </javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="move(4)" expression-java="move(4)" enable="true"/>
+                <if condition="Greenfoot.getRandomNumber(10)==1" condition-java="Greenfoot.getRandomNumber(10) == 1" enable="true">
+                    <ifStatements>
+                        <call expression="turn(Greenfoot.getRandomNumber(90)-45)" expression-java="turn(Greenfoot.getRandomNumber(90) - 45)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isAtEdge()" condition-java="isAtEdge()" enable="true">
+                    <ifStatements>
+                        <call expression="turn(180)" expression-java="turn(180)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="pigtouch" enable="true">
+            <javadoc xml:space="preserve">This method makes  it so that when the snake touches the pig, the pig perishes and dissapears. It also plays the lose noise</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="Actor" type-java="Actor" name="pig" value="getOneIntersectingObject(Pig.class)" value-java="getOneIntersectingObject(Pig.class)" enable="true"/>
+                <if condition="pig!=null" condition-java="pig != null" enable="true">
+                    <ifStatements>
+                        <variable type="World" type-java="World" name="world" value="getWorld()" value-java="getWorld()" enable="true"/>
+                        <call expression="world.removeObject(pig)" expression-java="world.removeObject(pig)" enable="true"/>
+                        <call expression="Greenfoot.playSound(&quot;lose.wav&quot;)" expression-java="Greenfoot.playSound(&quot;lose.wav&quot;)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="boolean" type-java="boolean" name="isGameLost" enable="true">
+            <javadoc xml:space="preserve">This method makes it so that if the pig ceases to exist in the world, then it wold return a true value to the game being lost. This information goes to the following method "transitionToDefeat" and causes the defeat screen to appear</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="World" type-java="World" name="world" value="getWorld()" value-java="getWorld()" enable="true"/>
+                <if condition="world.getObjects(Pig.class).isEmpty()" condition-java="world.getObjects(Pig.class).isEmpty()" enable="true">
+                    <ifStatements>
+                        <return value="true" value-java="true" enable="true"/>
+                    </ifStatements>
+                    <else>
+                        <return value="false" value-java="false" enable="true"/>
+                    </else>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="transitionToDefeat" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="World" type-java="World" name="Defeat" value="new Defeat()" value-java=" new Defeat()" enable="true"/>
+                <call expression="Greenfoot.setWorld(Defeat)" expression-java="Greenfoot.setWorld(Defeat)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

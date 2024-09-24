@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Victory
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=Victory()
+comment1.text=\r\n\ This\ method\ shows\ the\ text\ that\ will\ appear\ as\ well\ as\ the\ coordinates\ of\ where\ it\ will\ appear\r\n
+comment2.params=message\ x\ y
+comment2.target=void\ showTextWithBigBlackFont(java.lang.String,\ int,\ int)
+comment2.text=\r\n\ This\ shows\ the\ parameters\ of\ the\ text\ block,\ such\ as\ the\ font,\ color\ and\ message\r\n
+numComments=3

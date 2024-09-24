@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Pig
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ This\ method\ executes\ every\ other\ method\ in\ the\ list,\ if\ i\ were\ to\ forget\ to\ write\ one\ of\ these\ three\ down\ then\ the\ game\ wouldnt\ function\ with\ its\ intended\ purpose\r\n
+comment2.params=
+comment2.target=void\ victorycon()
+comment2.text=\r\n\ This\ methos\ is\ used\ to\ transition\ to\ the\ victory\ screen\ and\ play\ the\ win\ sound\ after\ \r\n
+comment3.params=
+comment3.target=void\ eat()
+comment3.text=\r\n\ This\ method\ is\ used\ to\ make\ the\ pig\ eat\ the\ burger\ as\ well\ as\ play\ the\ noise\ when\ it\ does\ so\r\n
+comment4.params=
+comment4.target=void\ moveAndTurn()
+comment4.text=\r\n\ This\ method\ is\ used\ to\ control\ the\ movement\ of\ the\ pig\ within\ the\ world\r\n
+comment5.params=
+comment5.target=boolean\ isGameWon()
+comment5.text=\r\n\ \r\n
+comment6.params=
+comment6.target=void\ transitionToVictory()
+comment6.text=\r\n\ \r\n
+numComments=7
